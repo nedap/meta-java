@@ -24,7 +24,7 @@ JVM_RDEPENDS = " \
 
 RDEPENDS:${PN} = "${JVM_RDEPENDS}"
 
-API_RELEASE_NAME = "jdk-${PV}"
+API_RELEASE_NAME = "jdk${PV}"
 API_OS = "linux"
 API_ARCH:aarch64 = "aarch64"
 API_ARCH:x86_64 = "x64"
@@ -34,8 +34,9 @@ API_HEAP_SIZE ?= "normal"
 API_VENDOR = "eclipse"
 
 
+SRC_URI = "https://github.com/adoptium/temurin8-binaries/releases/download/${API_RELEASE_NAME}/OpenJDK8U-jdk_${API_ARCH}_linux_${API_JVM_IMPL}_${PV}.tar.gz;downloadfilename=${BPN}-${API_ARCH}-${PV}.tar.gz;subdir=${BPN}-${PV};striplevel=1"
 # /v3/binary/version/{release_name}/{os}/{arch}/{image_type}/{jvm_impl}/{heap_size}/{vendor}
-SRC_URI = "https://api.adoptium.net/v3/binary/version/${API_RELEASE_NAME}/${API_OS}/${API_ARCH}/${API_IMAGE_TYPE}/${API_JVM_IMPL}/${API_HEAP_SIZE}/${API_VENDOR};downloadfilename=${BPN}-${API_ARCH}-${PV}.tar.gz;subdir=${BPN}-${PV};striplevel=1"
+#SRC_URI = "https://api.adoptium.net/v3/binary/version/${API_RELEASE_NAME}/${API_OS}/${API_ARCH}/${API_IMAGE_TYPE}/${API_JVM_IMPL}/${API_HEAP_SIZE}/${API_VENDOR};downloadfilename=${BPN}-${API_ARCH}-${PV}.tar.gz;subdir=${BPN}-${PV};striplevel=1"
 SRC_URI[sha256sum] = "${JVM_CHECKSUM}"
 
 # Prevent the packaging task from stripping out
