@@ -4,7 +4,7 @@ LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=a2b2e5b95bf768dd5c4ca097c9cde9e9"
 
 HOMEPAGE = "http://www.jcraft.com/jzlib"
 
-SRC_URI = "http://www.jcraft.com/jzlib/jzlib-${PV}.tar.gz"
+SRC_URI = "https://github.com/nedap/nsm-mirror-jzlib/releases/download/jzlib-1.0.7/jzlib-1.0.7.tar.gz"
 
 inherit java-library
 
