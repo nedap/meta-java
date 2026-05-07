@@ -27,8 +27,8 @@ CXXFLAGS:append = " -std=gnu++98 -fno-tree-dse"
 # WORKAROUND: ignore errors from new compilers
 CFLAGS:append = " -Wno-error=stringop-overflow -Wno-error=return-type"
 
-# oe.utils.get_host_compiler_version returns "gcc, 9.2" and we want -> "9"
-HOST_COMPILER_MAJOR="${@oe.utils.get_host_compiler_version(d)[1].split(".", 2)[0]}"
+# oe.utils.get_host_gcc_version returns "9.2" and we want -> "9"
+HOST_COMPILER_MAJOR = "${@oe.utils.get_host_gcc_version(d).split('.', 1)[0]}"
 CFLAGS:append = " ${@oe.utils.less_or_equal('HOST_COMPILER_MAJOR', '8', '', ' -Wno-error=format-overflow', d)}"
 
 # Explicitly pass -fcommon since GCC 10 defaults to -fno-common for C sources
