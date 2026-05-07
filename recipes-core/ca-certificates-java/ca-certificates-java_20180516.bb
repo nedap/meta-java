@@ -26,7 +26,6 @@ SRCREV = "793b846dcd4e79371bbe8069e4125ec2fd462e57"
 
 inherit java
 
-S = "${WORKDIR}/git"
 B = "${WORKDIR}/build"
 
 JARFILENAME = "${BPN}.jar"
