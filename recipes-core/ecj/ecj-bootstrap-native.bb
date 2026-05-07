@@ -18,8 +18,8 @@ PROVIDES = "virtual/javac-native"
 
 SRC_URI = "file://ecj.in"
 
-S = "${WORKDIR}/sources"
-UNPACKDIR = "${S}"
+UNPACKDIR = "${WORKDIR}/sources"
+S = "${UNPACKDIR}"
 
 JAR = "ecj-bootstrap.jar"
 
