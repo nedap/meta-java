@@ -8,7 +8,7 @@ HOMEPAGE = "http://hsqldb.org"
 
 SRC_URI = "${SOURCEFORGE_MIRROR}/hsqldb/hsqldb_1_8_0_10.zip"
 
-S = "${WORKDIR}/${PN}"
+S = "${UNPACKDIR}/${PN}"
 
 inherit java-library
 

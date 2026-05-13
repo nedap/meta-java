@@ -7,7 +7,7 @@ DESCRIPTION = "Efficient, up-to-date, and feature-rich package implementing the 
 
 SRC_URI = "http://archive.apache.org/dist/httpcomponents/commons-httpclient/source/${BP}-src.tar.gz"
 
-S = "${WORKDIR}/${BP}"
+S = "${UNPACKDIR}/${BP}"
 
 DEPENDS += "commons-logging commons-codec"
 RDEPENDS:${PN} = "libcommons-logging-java libcommons-codec-java"

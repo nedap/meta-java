@@ -16,7 +16,6 @@ SRC_URI = "http://www.cs.princeton.edu/~appel/modern/java/JLex/Archive/${PV}/Mai
            file://jlex \
           "
 
-UNPACKDIR = "${WORKDIR}/sources"
 S = "${UNPACKDIR}"
 
 do_configure() {

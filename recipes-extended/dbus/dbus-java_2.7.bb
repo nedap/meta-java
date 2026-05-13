@@ -20,7 +20,7 @@ SRC_URI = "http://dbus.freedesktop.org/releases/dbus-java/dbus-java-${PV}.tar.gz
 
 SRC_URI[sha256sum] = "be404ea36284d938646192d0ee42e146853064217d4e3aaf89b56bd351ebca33"
 
-S = "${WORKDIR}/dbus-java-${PV}"
+S = "${UNPACKDIR}/dbus-java-${PV}"
 
 inherit java-library
 

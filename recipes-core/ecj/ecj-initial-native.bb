@@ -12,7 +12,6 @@ DEPENDS = "libecj-bootstrap-native"
 
 SRC_URI = "file://ecj-initial.in"
 
-UNPACKDIR = "${WORKDIR}/sources"
 S = "${UNPACKDIR}"
 
 inherit native

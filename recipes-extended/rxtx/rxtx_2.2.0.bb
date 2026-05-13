@@ -24,7 +24,7 @@ SRC_URI = "http://rxtx.qbang.org/pub/rxtx/rxtx-2.2pre2.zip \
 
 SRC_URI[sha256sum] = "3c30373e760f444def3650c76c5a00ae12fb1d860ec008750d084f4880495b03"
 
-S = "${WORKDIR}/rxtx-2.2pre2"
+S = "${UNPACKDIR}/rxtx-2.2pre2"
 
 INSANE_SKIP:${JPN} += "dev-so"
 

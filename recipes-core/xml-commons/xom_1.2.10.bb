@@ -20,7 +20,7 @@ SRC_URI = "\
 SRC_URI[archive.md5sum] = "9f3a2ae827a9f6826fe76e4b7b0c22b3"
 SRC_URI[archive.sha256sum] = "39985c2debb8044005fd07b09cb06f10e75652b3c048c9b4431434215332bc85"
 
-S = "${WORKDIR}/XOM"
+S = "${UNPACKDIR}/XOM"
 
 PACKAGE_ARCH = "${TUNE_PKGARCH}"
 
@@ -29,9 +29,9 @@ inherit java-library
 DEPENDS = "fastjar-native virtual/javac-native xerces-j xalan-j"
 
 do_move_jaxen() {
-    if [ -d ${WORKDIR}/git ] ; then
-        mv ${WORKDIR}/git/jaxen ${WORKDIR}/jaxen-${PV_jaxen}
-        rm -rf ${WORKDIR}/git
+    if [ -d ${UNPACKDIR}/git ] ; then
+        mv ${UNPACKDIR}/git/jaxen ${UNPACKDIR}/jaxen-${PV_jaxen}
+        rm -rf ${UNPACKDIR}/git
     fi
 
 }
@@ -44,7 +44,7 @@ do_compile() {
     oe_makeclasspath cp -s xercesImpl xalan2
     cp=build:$cp
 
-    scp="${WORKDIR}/jaxen-${PV_jaxen}/src/java/main"
+    scp="${UNPACKDIR}/jaxen-${PV_jaxen}/src/java/main"
 
     javac -sourcepath src:$scp -cp $cp -d build `find src -name "*.java" -and -not \( -wholename "*tests*" -or -wholename "*samples*" -or -wholename "*tools*" \)`
     javac -sourcepath fatsrc:$scp -cp $cp -d build `find fatsrc -name "*.java" -and -not \( -wholename "*tests*" -or -wholename "*samples*" -or -wholename "*tools*" \)`

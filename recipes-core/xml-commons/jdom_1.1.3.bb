@@ -15,7 +15,7 @@ PACKAGE_ARCH = "${TUNE_PKGARCH}"
 
 inherit java-library
 
-S = "${WORKDIR}/${PN}"
+S = "${UNPACKDIR}/${PN}"
 
 do_compile() {
   mkdir -p build

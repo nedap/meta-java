@@ -30,7 +30,7 @@ EXTRA_OECONF:append = "\
     --with-stdc++lib=dynamic \
     ${@jdk_configure_options(d)} \
 "
-# --with-boot-jdk=${WORKDIR}/fake-jdk
+# --with-boot-jdk=${UNPACKDIR}/fake-jdk
 
 require openjdk-8-common.inc
 

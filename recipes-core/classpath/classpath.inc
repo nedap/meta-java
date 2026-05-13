@@ -25,7 +25,7 @@ PR = "r3"
 
 SRC_URI = "${GNU_MIRROR}/classpath/classpath-${PV}.tar.gz"
 
-S = "${WORKDIR}/${PBN}-${PV}"
+S = "${UNPACKDIR}/${PBN}-${PV}"
 
 export JAVA = "java"
 export JAVAC = "javac"

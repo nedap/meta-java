@@ -5,7 +5,7 @@ HOMEPAGE = "http://www.extreme.indiana.edu/xgws/xsoap/xpp/"
 
 SRC_URI = "http://www.extreme.indiana.edu/xgws/xsoap/xpp/download/PullParser2/PullParser2.1.10.tgz"
 
-S = "${WORKDIR}/PullParser${PV}"
+S = "${UNPACKDIR}/PullParser${PV}"
 
 inherit java-library
 

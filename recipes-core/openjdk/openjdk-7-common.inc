@@ -6,7 +6,7 @@ SECTION  = "libs"
 
 ICEDTEA_VERSION = "${@bb.parse.vars_from_file(d.getVar('FILE', False),d)[1].split("-")[1] or '1.0'}"
 
-S = "${WORKDIR}/${ICEDTEA}"
+S = "${UNPACKDIR}/${ICEDTEA}"
 
 DEPENDS:append_libc-uclibc = " virtual/libiconv "
 
@@ -19,7 +19,7 @@ DEPENDS:append = " qemu-native "
 B = "${S}/build"
 
 JDK_HOME = "${libdir_jvm}/${JDK_DIR}"
-JDK_FAKE = "${WORKDIR}/fake-jdk"
+JDK_FAKE = "${UNPACKDIR}/fake-jdk"
 
 # Puts an OE specific string into the binary making it possible for the user
 # to know where it comes from (and blame the right people ...).
@@ -116,13 +116,13 @@ EXTRA_OECONF = " \
     --with-jdk-home=${STAGING_LIBDIR_JVM_NATIVE}/icedtea7-native \
     --with-rhino=${STAGING_DATADIR_JAVA}/rhino.jar \
     \
-    --with-openjdk-src-zip=${WORKDIR}/${OPENJDK_FILE} \
-    --with-hotspot-src-zip=${WORKDIR}/${HOTSPOT_FILE} \
-    --with-corba-src-zip=${WORKDIR}/${CORBA_FILE} \
-    --with-jaxp-src-zip=${WORKDIR}/${JAXP_FILE} \
-    --with-jaxws-src-zip=${WORKDIR}/${JAXWS_FILE} \
-    --with-jdk-src-zip=${WORKDIR}/${JDK_FILE} \
-    --with-langtools-src-zip=${WORKDIR}/${LANGTOOLS_FILE} \
+    --with-openjdk-src-zip=${UNPACKDIR}/${OPENJDK_FILE} \
+    --with-hotspot-src-zip=${UNPACKDIR}/${HOTSPOT_FILE} \
+    --with-corba-src-zip=${UNPACKDIR}/${CORBA_FILE} \
+    --with-jaxp-src-zip=${UNPACKDIR}/${JAXP_FILE} \
+    --with-jaxws-src-zip=${UNPACKDIR}/${JAXWS_FILE} \
+    --with-jdk-src-zip=${UNPACKDIR}/${JDK_FILE} \
+    --with-langtools-src-zip=${UNPACKDIR}/${LANGTOOLS_FILE} \
     \
     --with-parallel-jobs=${@openjdk_build_helper_get_parallel_make(d)} \
     \
@@ -141,8 +141,8 @@ EXTRA_OECONF += " \
 do_configure:prepend() {
     # Automatically copy everything that starts with "icedtea" (or "cacao") and ends with
     # ".patch" into the patches directory.
-    find ${WORKDIR} -maxdepth 1 -name "icedtea*.patch" -exec cp {} ${S}/patches \;
-    find ${WORKDIR} -maxdepth 1 -name "cacao*.patch" -exec cp {} ${S}/patches \;
+    find ${UNPACKDIR} -maxdepth 1 -name "icedtea*.patch" -exec cp {} ${S}/patches \;
+    find ${UNPACKDIR} -maxdepth 1 -name "cacao*.patch" -exec cp {} ${S}/patches \;
 }
 
 do_configure:append() {
@@ -199,7 +199,7 @@ do_install() {
         ln -s ${JDK_HOME}/jre/bin/$bf ${D}${JDK_HOME}/bin/$bf
     done
 
-    install -m644 ${WORKDIR}/jvm.cfg  ${D}${JDK_HOME}/jre/lib/${JDK_ARCH}/
+    install -m644 ${UNPACKDIR}/jvm.cfg  ${D}${JDK_HOME}/jre/lib/${JDK_ARCH}/
     # workaround for shared libarary searching
     ln -sf ${JDK_HOME}/jre/lib/${JDK_ARCH}/server/libjvm.so ${D}${JDK_HOME}/jre/lib/${JDK_ARCH}/
 }

@@ -9,7 +9,7 @@ DEPENDS = "ant-native"
 
 inherit java-library
 
-S = "${WORKDIR}/${PN}_1_1_3_4c"
+S = "${UNPACKDIR}/${PN}_1_1_3_4c"
 
 JAR = "${PN}-${PV}.jar"
 

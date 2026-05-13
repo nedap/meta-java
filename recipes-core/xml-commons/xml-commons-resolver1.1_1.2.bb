@@ -8,7 +8,7 @@ SRC_URI = "http://archive.apache.org/dist/xml/commons/xml-commons-resolver-${PV}
 
 inherit java-library
 
-S = "${WORKDIR}/xml-commons-resolver-${PV}"
+S = "${UNPACKDIR}/xml-commons-resolver-${PV}"
 
 DEPENDS = "fastjar-native jaxp1.3"
 

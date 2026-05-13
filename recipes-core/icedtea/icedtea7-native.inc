@@ -59,7 +59,7 @@ SRC_URI = " \
   file://vframeArray_Fix_sigsegv.patch;apply=no \
   "
 
-S = "${WORKDIR}/${ICEDTEA}"
+S = "${UNPACKDIR}/${ICEDTEA}"
 B = "${S}/build"
 
 # openjdk looks in /usr/include and /usr/lib for freetype by default.
@@ -82,7 +82,7 @@ EXTRA_OECONF = "\
     --disable-nss \
     --disable-system-lcms \
     --disable-system-gtk \
-    --with-jdk-home=${WORKDIR}/fake-jdk \
+    --with-jdk-home=${UNPACKDIR}/fake-jdk \
     --with-javac=${STAGING_BINDIR_NATIVE}/javac \
     --with-rhino=${STAGING_DATADIR_NATIVE}/java/rhino.jar \
     --with-openjdk-src-zip=${DL_DIR}/${OPENJDK_FILE_DOWNLOAD} \
@@ -105,26 +105,26 @@ do_configure:prepend() {
 
 	# Automatically copy everything that starts with "icedtea" and ends with
 	# ".patch" into the patches directory.
-	find ${WORKDIR} -maxdepth 1 -name "icedtea*.patch" -exec cp {} ${S}/patches \;
+	find ${UNPACKDIR} -maxdepth 1 -name "icedtea*.patch" -exec cp {} ${S}/patches \;
 
 	# Prepare JDK-like directory with Classpath' files which we can treat as a
 	# SYSTEM_GCJ_DIR afterwards.
-	mkdir -p ${WORKDIR}/fake-jdk/jre/lib/
-	ln -sf ${STAGING_DATADIR_NATIVE}/classpath/glibj.zip ${WORKDIR}/fake-jdk/jre/lib/rt.jar
+	mkdir -p ${UNPACKDIR}/fake-jdk/jre/lib/
+	ln -sf ${STAGING_DATADIR_NATIVE}/classpath/glibj.zip ${UNPACKDIR}/fake-jdk/jre/lib/rt.jar
 
-        mkdir -p ${WORKDIR}/fake-jdk/bin
-        ln -sf ${STAGING_BINDIR_NATIVE}/java  ${WORKDIR}/fake-jdk/bin/java
-	#ln -sf ${STAGING_BINDIR_NATIVE}/javac ${WORKDIR}/fake-jdk/bin/javac
-	ln -sf ${STAGING_BINDIR_NATIVE}/gjavah ${WORKDIR}/fake-jdk/bin/javah
-	ln -sf ${STAGING_BINDIR_NATIVE}/gjar  ${WORKDIR}/fake-jdk/bin/jar
-	ln -sf ${STAGING_BINDIR_NATIVE}/grmic ${WORKDIR}/fake-jdk/bin/rmic
-        ln -sf ${STAGING_BINDIR_NATIVE}/gnative2ascii ${WORKDIR}/fake-jdk/bin/native2ascii
+        mkdir -p ${UNPACKDIR}/fake-jdk/bin
+        ln -sf ${STAGING_BINDIR_NATIVE}/java  ${UNPACKDIR}/fake-jdk/bin/java
+	#ln -sf ${STAGING_BINDIR_NATIVE}/javac ${UNPACKDIR}/fake-jdk/bin/javac
+	ln -sf ${STAGING_BINDIR_NATIVE}/gjavah ${UNPACKDIR}/fake-jdk/bin/javah
+	ln -sf ${STAGING_BINDIR_NATIVE}/gjar  ${UNPACKDIR}/fake-jdk/bin/jar
+	ln -sf ${STAGING_BINDIR_NATIVE}/grmic ${UNPACKDIR}/fake-jdk/bin/rmic
+        ln -sf ${STAGING_BINDIR_NATIVE}/gnative2ascii ${UNPACKDIR}/fake-jdk/bin/native2ascii
 
-	mkdir -p ${WORKDIR}/fake-jdk/include
+	mkdir -p ${UNPACKDIR}/fake-jdk/include
 	for i in ${STAGING_INCDIR_NATIVE}/classpath/* ;do
 		test -r $i | continue;
 		bn=`basename $i`
-		ln -sf $i ${WORKDIR}/fake-jdk/include/$bn;
+		ln -sf $i ${UNPACKDIR}/fake-jdk/include/$bn;
 	done
 }
 
@@ -154,9 +154,9 @@ do_configure:append() {
 	${POST_CONFIGURE_CLEAN_X11}
 	oe_runmake patch-boot
 
-	patch -p1 < ${WORKDIR}/jaxws_fix_NullPointerException.patch
-	patch -p1 < ${WORKDIR}/sigsegv.patch
-	patch -p1 < ${WORKDIR}/vframeArray_Fix_sigsegv.patch
+	patch -p1 < ${UNPACKDIR}/jaxws_fix_NullPointerException.patch
+	patch -p1 < ${UNPACKDIR}/sigsegv.patch
+	patch -p1 < ${UNPACKDIR}/vframeArray_Fix_sigsegv.patch
 }
 
 EXTRA_OEMAKE = ' \

@@ -26,7 +26,7 @@ SRCREV = "793b846dcd4e79371bbe8069e4125ec2fd462e57"
 
 inherit java
 
-B = "${WORKDIR}/build"
+B = "${UNPACKDIR}/build"
 
 JARFILENAME = "${BPN}.jar"
 
@@ -66,7 +66,7 @@ do_install () {
 	oe_jarinstall ${JARFILENAME}
 
 	mkdir -p ${D}${sysconfdir}/ssl/certs/java
-	install -Dm0755 ${WORKDIR}/${BPN}.hook.in ${D}${sysconfdir}/ca-certificates/update.d/${BPN}-hook
+	install -Dm0755 ${UNPACKDIR}/${BPN}.hook.in ${D}${sysconfdir}/ca-certificates/update.d/${BPN}-hook
 	sed -e 's|@@datadir_java@@|${datadir_java}|' \
 	    -e 's|@@libdir_jvm@@|${libdir_jvm}|' \
 	    -e 's|@@JARFILENAME@@|${JARFILENAME}|' \

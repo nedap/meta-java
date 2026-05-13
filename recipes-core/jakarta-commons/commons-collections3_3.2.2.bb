@@ -7,7 +7,7 @@ DESCRIPTION = "A set of abstract data type interfaces and implementations that o
 
 SRC_URI = "http://www.apache.org/dist/commons/collections/source/commons-collections-${PV}-src.tar.gz"
 
-S = "${WORKDIR}/commons-collections-${PV}-src"
+S = "${UNPACKDIR}/commons-collections-${PV}-src"
 
 
 SRC_URI[sha256sum] = "070d94fe77969d8949bd129a618e6a7bee6b83b5b5db3ef3f983395a5428b914"

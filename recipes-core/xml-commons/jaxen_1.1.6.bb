@@ -21,7 +21,7 @@ SRC_URI = "\
 SRC_URI[jdom.md5sum] = "22745cbaaddb12884ed8ee09083d8fe2"
 SRC_URI[jdom.sha256sum] = "a13549087141be24ad176b659afdc2c675f1ffa5288ff999a193d6d44a282056"
 
-S = "${WORKDIR}/git/jaxen"
+S = "${UNPACKDIR}/git/jaxen"
 
 PACKAGE_ARCH = "${TUNE_PKGARCH}"
 
@@ -31,7 +31,7 @@ do_compile() {
   mkdir -p build
 
   oe_makeclasspath cp -s xercesImpl xom
-	scp="src/java/main:${WORKDIR}/jdom-1.1/src/java"
+	scp="src/java/main:${UNPACKDIR}/jdom-1.1/src/java"
 
   javac -sourcepath $scp -cp $cp -d build `find src/java/main -name "*.java" -and -not -wholename "*dom4j*"`
   (cd src/java/main && find org -name "*.properties" -exec cp {} ../../../build/{} \;)

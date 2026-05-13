@@ -18,7 +18,7 @@ SRC_URI = "${SOURCEFORGE_MIRROR}/ant-contrib/ant-contrib-${PV}-src.zip"
 
 SRC_URI[sha256sum] = "ba3621f397af14d5a19375f391ec9bf2908c46c5558ca0df8365e04fe3ac3633"
 
-S = "${WORKDIR}/ant-contrib"
+S = "${UNPACKDIR}/ant-contrib"
 
 do_compile() {
     mkdir -p build

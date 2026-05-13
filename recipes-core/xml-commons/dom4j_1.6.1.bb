@@ -25,7 +25,7 @@ do_compile() {
   mkdir -p build
 
   oe_makeclasspath cp -s xercesImpl xalan2 xpp2 xpp3 jaxen
-	scp="src/java:${WORKDIR}/ws-jaxme-0.5.2/src/api"
+	scp="src/java:${UNPACKDIR}/ws-jaxme-0.5.2/src/api"
 
   javac -sourcepath $scp -cp $cp -d build `find src/java -name "*.java" -and -not -wholename "*datatype*"`
   (cd src/java && find org -name "*.properties" -exec cp {} ../../build/{} \;)

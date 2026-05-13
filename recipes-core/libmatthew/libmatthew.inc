@@ -6,7 +6,7 @@ LICENSE = "MIT"
 DEPENDS = "virtual/java-native classpath-native classpath"
 
 
-S = "${WORKDIR}/libmatthew-java-${PV}"
+S = "${UNPACKDIR}/libmatthew-java-${PV}"
 
 PACKAGE_ARCH = "${TUNE_PKGARCH}"
 inherit java-library

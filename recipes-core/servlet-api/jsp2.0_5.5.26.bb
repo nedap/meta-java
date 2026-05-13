@@ -5,7 +5,7 @@ AUTHOR = "Apache Software Foundation"
 
 SRC_URI = "http://archive.apache.org/dist/tomcat/tomcat-5/v${PV}/src/apache-tomcat-${PV}-src.tar.gz"
 
-S = "${WORKDIR}/apache-tomcat-${PV}-src/servletapi/jsr152"
+S = "${UNPACKDIR}/apache-tomcat-${PV}-src/servletapi/jsr152"
 
 inherit java-library
 

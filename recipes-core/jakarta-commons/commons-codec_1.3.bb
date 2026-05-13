@@ -7,7 +7,7 @@ DESCRIPTION = "Java library with simple encoder and decoders for various formats
 
 SRC_URI = "http://archive.apache.org/dist/commons/codec/source/${BP}-src.tar.gz"
 
-S = "${WORKDIR}/${BP}"
+S = "${UNPACKDIR}/${BP}"
 
 SRC_URI[sha256sum] = "12effcf3fea025bd34edbfec60a6216ca453fb27e781d8e5783caf75fd33d90e"
 
