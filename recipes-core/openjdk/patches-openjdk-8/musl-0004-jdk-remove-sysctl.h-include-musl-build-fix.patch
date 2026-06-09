@@ -16,6 +16,7 @@ etc.
 Remove it, at things seem to work without as well.
 
 Upstream-Status: Inappropriate [musl specific]
+
 Signed-off-by: André Draszik <andre.draszik@jci.com>
 ---
  jdk/src/solaris/native/java/net/PlainDatagramSocketImpl.c   | 1 -

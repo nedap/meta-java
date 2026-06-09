@@ -11,6 +11,7 @@ We can now pass in the sysroot, so that the trustStore
 is written to /etc/ssl/certs/java/cacerts below $SYSROOT.
 
 Upstream-Status: Inappropriate [OE specific]
+
 Signed-off-by: André Draszik <andre.draszik@jci.com>
 ---
  src/main/java/org/debian/security/UpdateCertificates.java | 6 +++++-

@@ -9,6 +9,7 @@ Content-Transfer-Encoding: 8bit
 the agent needs thread_db, which doesn't exist in musl
 
 Upstream-Status: Inappropriate [musl specific]
+
 Signed-off-by: André Draszik <andre.draszik@jci.com>
 ---
  hotspot/make/linux/makefiles/defs.make | 4 ++++

@@ -7,6 +7,7 @@ Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 
 Upstream-Status: Pending
+
 Signed-off-by: André Draszik <andre.draszik@jci.com>
 Signed-off-by: Richard Leitner <richard.leitner@skidata.com>
 ---

@@ -1,7 +1,9 @@
 Description: Threads created in Java by RXTX are not marked as daemon.
 Bug: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=674975
 Author: Christopher Wellons <mosquitopsu@gmail.com>
+
 Upstream-Status: Pending
+
 --- a/src/gnu/io/I2C.java
 +++ b/src/gnu/io/I2C.java
 @@ -468,7 +468,9 @@

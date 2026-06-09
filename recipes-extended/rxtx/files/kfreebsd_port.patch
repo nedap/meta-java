@@ -8,6 +8,7 @@ Description: Defines FreeBSD for kFreeBSD systems, also makes sure kfreeBSD is s
 
 Bug: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=585089
 Author: Scott Howard <showard@debian.org>
+
 Upstream-Status: Pending
 
 Index: rxtx/src/RS485Imp.c

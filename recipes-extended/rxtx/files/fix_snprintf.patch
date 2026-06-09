@@ -2,6 +2,7 @@ From: Jose Luis Guardiola <guardiola@iti.upv.es>
 Forwarded: no
 Description: replace s[n]printf with asprintf/free
 Bug-Debian: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=731151
+
 Upstream-Status: Pending
 
 --- a/src/SerialImp.c

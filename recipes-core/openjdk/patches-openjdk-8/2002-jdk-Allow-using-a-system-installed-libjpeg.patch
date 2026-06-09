@@ -19,6 +19,7 @@ Issues fixed on top of debian patch:
     LDFLAGS (as done when 'security' is enabled)
 
 Upstream-Status: Backport
+
 Signed-off-by: André Draszik <andre.draszik@jci.com>
 Signed-off-by: Richard Leitner <richard.leitner@skidata.com>
 

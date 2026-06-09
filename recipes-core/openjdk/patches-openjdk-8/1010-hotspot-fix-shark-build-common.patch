@@ -3,6 +3,8 @@ From: Jens Rehsack <rehsack@gmail.com>
 Date: Thu, 2 Jan 2020 10:22:19 +0100
 Subject: [PATCH 1010/1013] hotspot: fix shark build (common)
 
+Upstream-Status: Pending
+
 Signed-off-by: Richard Leitner <richard.leitner@skidata.com>
 ---
  make/Makefile                               |  2 +-
@@ -445,4 +447,3 @@ index 243183c07..601ca7925 100644
      released_fast, slow_path);
 -- 
 2.26.2
-

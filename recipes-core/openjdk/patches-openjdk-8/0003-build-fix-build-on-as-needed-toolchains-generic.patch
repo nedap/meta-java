@@ -6,6 +6,8 @@ MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 
+Upstream-Status: Pending
+
 If the (host) toolchain has been configured to
 unconditionally add --as-needed to the linker command line
 then linking fails when using the system zlib:

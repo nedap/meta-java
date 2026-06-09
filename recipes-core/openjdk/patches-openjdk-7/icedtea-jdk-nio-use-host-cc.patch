@@ -1,3 +1,5 @@
+Upstream-Status: Inappropriate [OE cross-compile specific]
+
 --- openjdk/jdk/make/java/nio/Makefile
 +++ openjdk/jdk/make/java/nio/Makefile
 @@ -961,7 +961,7 @@

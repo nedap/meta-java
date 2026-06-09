@@ -14,6 +14,7 @@ Patch taken from Alpine Linux:
     https://git.alpinelinux.org/cgit/aports/tree/community/openjdk8/icedtea-jdk-fix-libjvm-load.patch?id=4d34f29dddd3934358df7a9607706d09ae0433c3
 
 Upstream-Status: Inappropriate [musl specific]
+
 Signed-off-by: André Draszik <andre.draszik@jci.com>
 ---
  jdk/src/solaris/bin/java_md_solinux.c | 2 ++

@@ -16,6 +16,7 @@ Content-Transfer-Encoding: 8bit
     |              dlsym
 
 Upstream-Status: Inappropriate [musl specific]
+
 Signed-off-by: André Draszik <andre.draszik@jci.com>
 ---
  hotspot/src/os/linux/vm/os_linux.cpp | 11 +++++++++++

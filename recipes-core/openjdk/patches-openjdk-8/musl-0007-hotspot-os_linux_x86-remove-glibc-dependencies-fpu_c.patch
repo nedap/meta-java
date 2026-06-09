@@ -14,6 +14,7 @@ Patch adopted from Alpine linux:
     https://git.alpinelinux.org/cgit/aports/tree/community/openjdk8/icedtea-hotspot-musl.patch?id=4d34f29dddd3934358df7a9607706d09ae0433c3
 
 Upstream-Status: Inappropriate [musl specific]
+
 Signed-off-by: André Draszik <andre.draszik@jci.com>
 ---
  hotspot/src/os_cpu/linux_x86/vm/os_linux_x86.cpp | 4 +++-

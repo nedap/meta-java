@@ -13,6 +13,7 @@ Use appropriate #ifdef to disable their use on musl and thus
 to fix the build on musl.
 
 Upstream-Status: Pending
+
 Signed-off-by: André Draszik <andre.draszik@jci.com>
 Signed-off-by: Richard Leitner <richard.leitner@skidata.com>
 

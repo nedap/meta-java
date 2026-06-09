@@ -19,6 +19,7 @@ replacing isnanf(), even on glibc.
 Do so.
 
 Upstream-Status: Pending
+
 Signed-off-by: André Draszik <andre.draszik@jci.com>
 ---
  hotspot/src/share/vm/utilities/globalDefinitions_gcc.hpp | 2 +-

@@ -13,6 +13,7 @@ like
 
 
 Upstream-Status: Pending
+
 Signed-off-by: Khem Raj <raj.khem@gmail.com>
 Index: activation-1.1.1/source/javax/activation/MimeType.java
 ===================================================================

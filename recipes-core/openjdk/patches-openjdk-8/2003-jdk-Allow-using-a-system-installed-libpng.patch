@@ -16,6 +16,7 @@ Issues fixed on top of debian patch:
   * using the bundled libpng works
 
 Upstream-Status: Backport
+
 Signed-off-by: André Draszik <andre.draszik@jci.com>
 Signed-off-by: Richard Leitner <richard.leitner@skidata.com>
 

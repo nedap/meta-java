@@ -1,6 +1,7 @@
 Description: Java fails with a buffer overflow when there's a locked serial
 device, see http://mailman.qbang.org/pipermail/rxtx/2009-May/10897125.html.
 Author: Sergio Talens-Oliag <sto@debian.org>
+
 Upstream-Status: Pending
 
 Index: rxtx-2.2pre2/CNI/SerialImp.c

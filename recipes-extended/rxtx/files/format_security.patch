@@ -1,6 +1,7 @@
 From: tony mancill <tmancill@debian.org>
 Forwarded: no
 Description: use format specifiers in fprintf statements for hardening flags
+
 Upstream-Status: Pending
 
 --- a/src/SerialImp.c

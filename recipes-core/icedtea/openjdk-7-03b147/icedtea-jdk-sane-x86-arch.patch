@@ -3,6 +3,8 @@ From: Henning Heinold <heinold@inf.fu-berlin.de>
 Date: Wed, 14 Mar 2012 22:34:51 +0100
 Subject: [PATCH] real patch
 
+Upstream-Status: Inappropriate [OE specific]
+
 ---
  jdk/make/common/shared/Compiler-gcc.gmk            |    4 +-
  jdk/make/common/shared/Platform.gmk                |   18 ++++------
@@ -201,4 +203,3 @@ index 0000000..0f8fe07
 +-green ERROR
 -- 
 1.7.7
-

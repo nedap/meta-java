@@ -20,6 +20,7 @@ Description: The following patch should fix the reported issue.
  at all, and I don't know how it interacts with the BSD / Hurd ports.
  .
  Therefore this is the minimal fix, for now.
+
 Upstream-Status: Pending
 
 --- a/src/SerialImp.c

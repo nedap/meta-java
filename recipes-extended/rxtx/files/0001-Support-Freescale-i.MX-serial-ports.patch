@@ -5,7 +5,9 @@ Subject: [PATCH] Support Freescale i.MX serial ports
 Organization: O.S. Systems Software LTDA.
 
 Signed-off-by: Mario Domenech Goulart <mario@ossystems.com.br>
+
 Upstream-Status: Pending
+
 ---
  src/gnu/io/RXTXCommDriver.java | 1 +
  1 file changed, 1 insertion(+)

@@ -9,6 +9,7 @@ Content-Transfer-Encoding: 8bit
 https://bugs.alpinelinux.org/issues/7093
 
 Upstream-Status: Inappropriate [musl specific]
+
 Signed-off-by: André Draszik <andre.draszik@jci.com>
 ---
  .../native/sun/nio/fs/LinuxNativeDispatcher.c      | 29 +++++++++++++++-------

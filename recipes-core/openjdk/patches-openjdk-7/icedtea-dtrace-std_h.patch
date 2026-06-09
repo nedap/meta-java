@@ -16,6 +16,7 @@ Backport from upstream from jdk9
     diffstat	1 files changed, 8 insertions(+), 1 deletions(-) [+]
 
 Upstream-Status: Backport
+
 ---
  openjdk/hotspot/make/linux/makefiles/dtrace.make |    9 ++++++++-
  1 file changed, 8 insertions(+), 1 deletion(-)
