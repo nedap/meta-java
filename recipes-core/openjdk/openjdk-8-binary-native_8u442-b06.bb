@@ -14,11 +14,6 @@ JVM_RDEPENDS = " \
   alsa-lib (>= 0.9) \
   freetype (>= 2.13) \
   glibc (>= 2.17) \
-  libx11 (>= 1.7) \
-  libxext (>= 1.3) \
-  libxi (>= 1.8) \
-  libxrender (>= 0.9) \
-  libxtst (>= 1.2) \
   zlib (>= 1.2) \
 "
 
