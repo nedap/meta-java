@@ -1,0 +1,8 @@
+Nedap Project layer for Java support
+====================================
+
+This layer provides support for Java for use with OpenEmbedded and/or
+Yocto Project build systems.
+
+This is a very stripped down layer that is intended to just provide
+a native jdk.
