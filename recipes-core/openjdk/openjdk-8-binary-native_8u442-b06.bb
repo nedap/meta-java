@@ -51,8 +51,17 @@ INSANE_SKIP:${PN}:append = " dev-so"
 do_configure[noexec] = "1"
 do_compile[noexec] = "1"
 do_install() {
-    cp -R ${S}/* ${D}/
+    install -d ${D}${datadir}/${BPN}
+    cp -R ${S}/* ${D}${datadir}/${BPN}/
+    install -d ${D}${bindir}
+    for bin in $(ls ${D}${datadir}/${BPN}/bin/)
+    do
+      ln -srf ${D}${datadir}/${BPN}/bin/${bin} ${D}${bindir}/${bin}
+    done
+    #cp -R ${S}/* ${D}/
 }
+
+SYSROOT_DIRS:append = " ${bindir}"
 
 RPROVIDES:${PN} = "java"
 
